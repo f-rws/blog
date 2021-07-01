@@ -1,0 +1,14 @@
+@use "../../styles/theme";
+
+.wrapper {
+  width: 100%;
+  background-color: theme.$color-mirage;
+  padding: 30px 0;
+}
+
+.copyright {
+  color: theme.$color-periwinkle-gray;
+  text-align: center;
+  font-size: 0.9rem;
+  letter-spacing: 0.05em;
+}
