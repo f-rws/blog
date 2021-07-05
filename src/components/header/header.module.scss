@@ -1,14 +1,19 @@
 @use "src/styles/theme";
+@use "src/styles/mixins";
 
 .wrapper {
-  padding: 10px;
+  padding: 10px 0;
   box-shadow: 0 2px 5px -4px;
 }
 
 .innerWrapper {
-  width: theme.$container-width;
+  max-width: theme.$container-width;
   text-align: center;
   margin: 0 auto;
+
+  @include mixins.mq("lg"){
+    width: 100%;
+  };
 }
 
 .link {

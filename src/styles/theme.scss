@@ -1,3 +1,5 @@
+@use "sass:math";
+
 // colors
 $color-white: #fdfdfd;
 $color-periwinkle-gray: #b5c8e2;
@@ -5,3 +7,10 @@ $color-mirage: #191f2a;
 
 // width
 $container-width: 850px;
+
+// break points
+$breakpoints: (
+  "sm": 520px,
+  "md": 720px,
+  "lg": 850px
+);

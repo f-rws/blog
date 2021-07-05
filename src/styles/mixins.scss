@@ -1,0 +1,7 @@
+@use "theme";
+
+@mixin mq($size) {
+  @media screen and (max-width: map-get(theme.$breakpoints,#{$size})) {
+    @content;
+  }
+}
