@@ -1,14 +1,12 @@
 import styles from '../styles/Home.module.scss';
-import { Footer } from '../components/footer/footer';
-import { Header } from '../components/header/header';
 import { PageSeo } from '../components/head/pageSeo';
+import { Layout } from '../components/layout/layout';
 
 export const Home = () => {
   return (
-    <div className={styles.container}>
+    <>
       <PageSeo title={'blog'} description={'フルサワのブログです'} />
-      <Header />
-      <main className={styles.main}>
+      <Layout>
         <h1 className={styles.title}>
           Welcome to <a href="https://nextjs.org">Next.js!</a>
         </h1>
@@ -41,9 +39,8 @@ export const Home = () => {
             <p>Instantly deploy your Next.js site to a public URL with Vercel.</p>
           </a>
         </div>
-      </main>
-      <Footer />
-    </div>
+      </Layout>
+    </>
   );
 };
 

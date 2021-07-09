@@ -1,0 +1,20 @@
+@use "src/styles/mixins";
+@use "src/styles/theme";
+
+.wrapper {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 16px;
+
+  @include mixins.mq("sm"){
+    width: theme.$container-width-sm;
+  };
+
+  @include mixins.mq("md"){
+    width: theme.$container-width-md;
+  };
+
+  @include mixins.mq("lg"){
+    width: theme.$container-width-lg;
+  };
+}
