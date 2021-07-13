@@ -1,4 +1,5 @@
 @use "theme";
+@import url(//fonts.googleapis.com/earlyaccess/notosansjapanese.css);
 
 /*
 html5doctor.com Reset Stylesheet
@@ -36,8 +37,8 @@ time, mark, audio, video {
 
 body {
   background-color: theme.$color-white;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-      Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  color: theme.$color-mine-shaft;
+  font-family: 'Avenir', 'Arial', 'Noto Suns Japanese', "Hiragino Sans", sans-serif;
   line-height:1.6;
 }
 
@@ -46,8 +47,8 @@ footer,header,hgroup,menu,nav,section {
   display:block;
 }
 
-nav ul {
-  list-style:none;
+nav, ul, li{
+  list-style: none;
 }
 
 blockquote, q {
