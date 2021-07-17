@@ -1,6 +1,6 @@
 import { join } from 'path';
 import fs from 'fs';
-import { Post } from '../types';
+import { PostData } from '../types';
 import matter from 'gray-matter';
 
 const postDirPath = join(process.cwd(), 'src/content/blog');
@@ -10,13 +10,13 @@ export const getPostBySlug = (slug: string) => {
   const fileContents = fs.readFileSync(slugPath, 'utf8');
   const { data, content } = matter(fileContents);
 
-  return { title: data.title, date: data.date, content: content };
+  return { slug: slug, title: data.title, date: data.date, content: content };
 };
 
 export const getAllPosts = () => {
   const slugs = fs.readdirSync(postDirPath);
 
-  const allPosts: Post[] = slugs.map((slug) => getPostBySlug(slug));
+  const allPosts: PostData[] = slugs.map((slug) => getPostBySlug(slug));
   const posts = allPosts.sort((a, b) => {
     if (a.date < b.date) {
       return 1;

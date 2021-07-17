@@ -1,17 +1,18 @@
-import styles from './article.module.scss';
+import styles from './post.module.scss';
 import { format } from 'date-fns';
 
 type ArticleProps = {
   title: string;
   date: string;
+  slug?: string; // src/page/posts/[slug].tsx を作成するまでオプショナルとしておく
 };
 
-export const Article: React.VFC<ArticleProps> = ({ title, date }) => {
+export const Post: React.VFC<ArticleProps> = ({ title, date }) => {
   const resultDate = format(new Date(date), 'yyyy.MM.dd');
 
   return (
     <li className={styles.wrapper}>
-      <h2 className={styles.title}>{title}</h2>
+      <a className={styles.title}>{title}</a>
       <time className={styles.date}>{resultDate}</time>
     </li>
   );

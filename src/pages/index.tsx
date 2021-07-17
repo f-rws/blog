@@ -1,13 +1,13 @@
 import styles from '../styles/home.module.scss';
 import { PageSeo } from '../components/head/pageSeo';
 import { Layout } from '../components/layout/layout';
-import { Article } from '../components/article/article';
+import { Post } from '../components/post/post';
 import { GetStaticProps } from 'next';
-import { Post } from '../types';
+import { PostData } from '../types';
 import { getAllPosts } from '../lib/posts';
 
 type HomeProps = {
-  posts: Post[];
+  posts: PostData[];
 };
 
 export const Home = (props: HomeProps) => {
@@ -19,9 +19,9 @@ export const Home = (props: HomeProps) => {
       <Layout>
         {posts && (
           <ul className={styles.articles}>
-            {posts.map((post) => {
+            {posts.map((post: PostData) => {
               const { title, date } = post;
-              return <Article title={title} date={date} key={title} />;
+              return <Post title={title} date={date} key={title} />;
             })}
           </ul>
         )}
@@ -33,7 +33,7 @@ export const Home = (props: HomeProps) => {
 export default Home;
 
 export const getStaticProps: GetStaticProps = async () => {
-  const posts: Post[] = getAllPosts();
+  const posts: PostData[] = getAllPosts();
 
   return { props: { posts } };
 };
