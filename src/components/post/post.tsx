@@ -1,19 +1,24 @@
 import styles from './post.module.scss';
 import { format } from 'date-fns';
+import Link from 'next/link';
 
-type ArticleProps = {
+type Props = {
+  slug: string;
   title: string;
   date: string;
-  slug?: string; // src/page/posts/[slug].tsx を作成するまでオプショナルとしておく
 };
 
-export const Post: React.VFC<ArticleProps> = ({ title, date }) => {
+export const Post: React.VFC<Props> = ({ slug, title, date }) => {
   const resultDate = format(new Date(date), 'yyyy.MM.dd');
 
   return (
-    <li className={styles.wrapper}>
-      <a className={styles.title}>{title}</a>
-      <time className={styles.date}>{resultDate}</time>
+    <li>
+      <Link href={`/posts/${slug}/`}>
+        <a className={styles.link}>
+          <h3 className={styles.title}>{title}</h3>
+          <time className={styles.date}>{resultDate}</time>
+        </a>
+      </Link>
     </li>
   );
 };
