@@ -20,8 +20,8 @@ export const Home = (props: HomeProps) => {
         {posts && (
           <ul className={styles.articles}>
             {posts.map((post: PostData) => {
-              const { title, date } = post;
-              return <Post title={title} date={date} key={title} />;
+              const { slug, title, date } = post;
+              return <Post slug={slug} title={title} date={date} key={title} />;
             })}
           </ul>
         )}

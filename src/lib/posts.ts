@@ -3,7 +3,7 @@ import fs from 'fs';
 import { PostData } from '../types';
 import matter from 'gray-matter';
 
-const postDirPath = join(process.cwd(), 'src/content/blog');
+export const postDirPath = join(process.cwd(), 'src/content/blog');
 
 export const getPostBySlug = (slug: string) => {
   const slugPath = join(postDirPath, slug, 'index.md');
@@ -26,4 +26,17 @@ export const getAllPosts = () => {
   });
 
   return posts;
+};
+
+export const getAllPostSlugs = () => {
+  const slugs = fs.readdirSync(postDirPath);
+  const dirNames = slugs.map((slug) => {
+    return {
+      params: {
+        slug: slug,
+      },
+    };
+  });
+
+  return dirNames;
 };
