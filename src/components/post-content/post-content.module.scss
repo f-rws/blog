@@ -1,10 +1,12 @@
+@use "src/styles/theme";
+
 .header {
   text-align: center;
   padding: 4rem 0;
 }
 
 .title {
-  font-size: 1.7rem;
+  font-size: theme.$font-size-28;
   font-weight: 500;
 }
 

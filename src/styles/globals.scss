@@ -37,9 +37,10 @@ time, mark, audio, video {
 
 body {
   background-color: theme.$color-white;
-  color: theme.$color-mine-shaft;
+  color: theme.$color-gray;
   font-family: 'Avenir', 'Arial', 'Noto Suns Japanese', "Hiragino Sans", sans-serif;
-  line-height:1.6;
+  line-height: 1.6;
+  letter-spacing: 0.05em;
 }
 
 article,aside,details,figcaption,figure,

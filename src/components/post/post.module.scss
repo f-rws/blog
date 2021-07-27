@@ -2,7 +2,7 @@
 
 .link {
   display: block;
-  color: theme.$color-mine-shaft;
+  color: theme.$color-gray;
   text-align: center;
   border: none;
   border-radius: 0.5rem;
@@ -12,17 +12,17 @@
   transition-duration: 0.3s;
 
   &:hover {
-    color: theme.$color-carnation;
+    color: theme.$color-primary;
     box-shadow: 0 0 4px 0 rgba(#000, 0.1);
   }
 }
 
 .title {
   display: block;
-  font-size: 1.7rem;
+  font-size: theme.$font-size-26;
   font-weight: 500;
 }
 
 .date {
-  color: theme.$color-mine-shaft;
+  color: theme.$color-gray;
 }
