@@ -1,18 +1,29 @@
-@use "sass:math";
+/* colors */
+$color-primary: #F54C5F;
+$color-secondary: #191F2A;
+$color-gray: #333;
+$color-lightblue: #B5C8E2;
+$color-white: #FDFDFD;
 
-// colors
-$color-mine-shaft: #333;
-$color-white: #fdfdfd;
-$color-periwinkle-gray: #b5c8e2;
-$color-mirage: #191f2a;
-$color-carnation: #F54C5F;
+/* font size */
+$font-size-12: 0.75rem;
+$font-size-14: 0.875rem;
+$font-size-16: 1rem;
+$font-size-18: 1.125rem;
+$font-size-20: 1.25rem;
+$font-size-22: 1.375rem;
+$font-size-24: 1.5rem;
+$font-size-26: 1.625rem;
+$font-size-28: 1.75rem;
+$font-size-30: 1.875rem;
+$font-size-32: 2rem;
 
-// width
+/* width */
 $container-width-sm: 520px;
 $container-width-md: 720px;
 $container-width-lg: 850px;
 
-// break points
+/* break points */
 $breakpoints: (
   "sm": 576px,
   "md": 768px,
