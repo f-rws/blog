@@ -12,7 +12,7 @@ export const PostContent: React.VFC<Props> = ({ postData }) => {
   const resultDate = format(new Date(date), 'yyyy.MM.dd');
 
   return (
-    <article>
+    <article className={styles.wrapper}>
       <header className={styles.header}>
         <h1 className={styles.title} itemProp={'headline'}>
           {title}
@@ -23,7 +23,7 @@ export const PostContent: React.VFC<Props> = ({ postData }) => {
           </time>
         </p>
       </header>
-      <ReactMarkdown>{content}</ReactMarkdown>
+      <ReactMarkdown className={styles.markdown}>{content}</ReactMarkdown>
     </article>
   );
 };
