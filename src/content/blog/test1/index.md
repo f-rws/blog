@@ -5,10 +5,11 @@ date: "2021-07-16"
 
 ## h2テストです
 ### h3テストです
-- ```list1```
+- `list1`
   - childItem1
     - grandChildItem1
 - list2
+
 # A demo of `react-markdown`
 
 `react-markdown` is a markdown component for React.
@@ -21,9 +22,10 @@ date: "2021-07-16"
 
 * Follows [CommonMark](https://commonmark.org)
 * Optionally follows [GitHub Flavored Markdown](https://github.github.com/gfm/)
-* Renders actual React elements instead of using `dangerouslySetInnerHTML`
-* Lets you define your own components (to render `MyHeading` instead of `h1`)
+* Renders actual React elements instead of using ```dangerouslySetInnerHTML```
+* Lets you define your own components (to render ```MyHeading``` instead of ```h1```)
 * Has a lot of plugins
+
 
 ## Table of contents
 
@@ -40,14 +42,14 @@ This section is replaced by an actual table of contents.
 コードを強調表示するプラグインの例を次に示します:
 [`rehype-highlight`](https://github.com/rehypejs/rehype-highlight).
 
-```js
+```javascript
 import React from 'react'
 import ReactDOM from 'react-dom'
 import Markdown from 'react-markdown'
 import rehypeHighlight from 'rehype-highlight'
 
 ReactDOM.render(
-  <Markdown rehypePlugins={[rehypeHighlight]}>{'# Your markdown here'}</Markdown>,
+  <Markdown rehypePlugins={[rehypeHighlight]}>{'# Your markdown here'}</Markdown>,<Markdown rehypePlugins={[rehypeHighlight]}>{'# Your markdown here'}</Markdown>,
   document.querySelector('#content')
 )
 ```
@@ -93,6 +95,12 @@ You can pass components to change things:
 
 ### テストです。
 
+```html
+<div>
+    <p>テスト</p>
+</div>
+```
+
 ```js
 import React from 'react'
 import ReactDOM from 'react-dom'
@@ -113,7 +121,34 @@ ReactDOM.render(
   document.querySelector('#content')
 )
 ```
-`console.log("テスト")`です。
+```console.log("テスト")```です。
+
+```typescript jsx
+import styles from './post.module.scss';
+import { format } from 'date-fns';
+import Link from 'next/link';
+
+type Props = {
+  slug: string;
+  title: string;
+  date: string;
+};
+
+export const Post: React.VFC<Props> = ({ slug, title, date }) => {
+  const resultDate = format(new Date(date), 'yyyy.MM.dd');
+
+  return (
+    <li>
+      <Link href={`/posts/${slug}/`}>
+        <a className={styles.link}>
+          <h3 className={styles.title}>{title}</h3>
+          <time className={styles.date}>{resultDate}</time>
+        </a>
+      </Link>
+    </li>
+  );
+};
+```
 
 ## More info?
 
@@ -123,3 +158,5 @@ Much more info is available in the
 ***
 
 A component by [Espen Hovlandsdal](https://espen.codes/)
+
+
