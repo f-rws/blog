@@ -66,10 +66,9 @@
 
   pre {
     background-color: theme.$color-code-block-background;
-    font-size: theme.$font-size-16;
     border-radius: .25em;
-    padding: 1em;
     margin: 1.5em 0;
+    padding: .75em;
     overflow-x: auto;
   }
 }
