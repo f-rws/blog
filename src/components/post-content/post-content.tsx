@@ -4,6 +4,7 @@ import styles from './post-content.module.scss';
 import { format } from 'date-fns';
 import { CodeBlock } from '../code-block/code-block';
 import gfm from 'remark-gfm';
+import { Share } from '../share/share';
 
 type Props = {
   postData: PostData;
@@ -29,6 +30,7 @@ export const PostContent: React.VFC<Props> = ({ postData }) => {
       <ReactMarkdown components={components} remarkPlugins={[gfm]} className={styles.markdown}>
         {content}
       </ReactMarkdown>
+      <Share />
     </article>
   );
 };

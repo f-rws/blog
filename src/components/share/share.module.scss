@@ -1,0 +1,36 @@
+@use "src/styles/theme";
+@use "src/styles/mixins";
+
+.wrapper {
+  text-align: center;
+  margin: 5em 0;
+}
+
+.twitterIcon {
+  color: theme.$color-twitter;
+  padding: .5em;
+  border-radius: 2em;
+
+  @include mixins.mq("lg"){
+    &:hover {
+      transform: scale(1.075);
+      transition-duration: 0.3s;
+
+      animation-name: pulse;
+      animation-duration: 1.5s;
+      animation-iteration-count: infinite;
+    }
+  }
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(theme.$color-twitter, 0.5)
+  }
+  70% {
+    box-shadow: 0 0 5px 5px rgba(theme.$color-twitter, 0)
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(theme.$color-twitter, 0)
+  }
+}
