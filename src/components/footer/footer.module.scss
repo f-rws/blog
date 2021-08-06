@@ -1,9 +1,40 @@
 @use "src/styles/theme";
+@use "src/styles/mixins";
 
 .wrapper {
   width: 100%;
   background-color: theme.$color-secondary;
-  padding: 30px 0;
+  text-align: center;
+  padding: 2em 0;
+}
+
+.iconsWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1em;
+}
+
+.iconItem {
+  padding: .75em;
+}
+
+.link {
+  display: inline-block;
+  height: 1.75em;
+}
+
+.icon {
+  display: inline;
+  color: theme.$color-lightblue;
+
+  @include mixins.mq("lg") {
+    &:hover {
+      transform: scale(1.05);
+      transition-duration: 0.2s;
+      color: darken(theme.$color-lightblue, 10%);
+    }
+  }
 }
 
 .copyright {
