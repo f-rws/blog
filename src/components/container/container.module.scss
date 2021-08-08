@@ -5,6 +5,7 @@
   width: 100%;
   margin: 0 auto;
   padding: 0 16px;
+  min-height: 80vh;
 
   @include mixins.mq("sm"){
     width: theme.$container-width-sm;
