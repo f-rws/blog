@@ -1,8 +1,8 @@
 @use "src/styles/theme";
 @use "src/styles/mixins";
 
-.wrapper {
-  padding: 10px 0;
+.header {
+  padding: 1.5em 0;
   box-shadow: 0 2px 12px 0 rgba(#000, 0.1);
 }
 
@@ -16,10 +16,13 @@
   };
 }
 
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .link {
-  color: theme.$color-secondary;
-  font-size: theme.$font-size-32;
-  font-weight: bold;
-  text-decoration: none;
-  background: none;
+  display: inline-block;
+  height: 30px;
 }
