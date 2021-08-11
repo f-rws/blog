@@ -6,7 +6,12 @@ export const Share = () => {
     <ul className={styles.wrapper}>
       <li>
         {/* https:twitter.com/intent/tweet の後にシェアをするコンテンツの url を埋め込む */}
-        <a href={'https:twitter.com/intent/tweet'} target={'_blank'} rel={'noreferrer nofollow'}>
+        <a
+          href={'https:twitter.com/intent/tweet'}
+          target={'_blank'}
+          rel={'noreferrer nofollow'}
+          className={styles.link}
+        >
           <AiOutlineTwitter size={'3em'} className={styles.twitterIcon} />
         </a>
       </li>
