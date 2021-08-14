@@ -18,7 +18,7 @@
 }
 
 .markdown {
-  font-size: theme.$font-size-18;
+  font-size: theme.$font-size-16;
   line-height: 1.8;
 
   h1, h2{
@@ -29,10 +29,16 @@
     border-bottom: theme.$color-lightgray dashed 3px;
   }
 
-  h3, h4, h5, h6 {
+  h3 {
     font-size: theme.$font-size-22;
     font-weight: 600;
     margin: 1.5em 0 .75em;
+  }
+
+  h4, h5, h6 {
+    font-size: theme.$font-size-18;
+    font-weight: 600;
+    margin: 1.25em 0 .75em;
   }
 
   ul {
@@ -46,6 +52,11 @@
         list-style-type: disc;
       }
     }
+  }
+
+  ol {
+    list-style-type: decimal;
+    padding-left: 1.5rem;
   }
 
   li::marker {
@@ -70,6 +81,15 @@
     margin: 1.5em 0;
     padding: .75em;
     overflow-x: auto;
+  }
+
+  blockquote {
+    background-color: lighten(theme.$color-lightblue, 15%);
+    border-radius: .25em;
+    font-style: italic;
+    color: lighten(theme.$color-gray, 10%);
+    margin: .75em 0;
+    padding: .75em;
   }
 }
 
