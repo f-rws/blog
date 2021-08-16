@@ -32,35 +32,56 @@
   h3 {
     font-size: theme.$font-size-22;
     font-weight: 600;
-    margin: 1.5em 0 .75em;
+    margin: 1.75em 0 1em;
   }
 
   h4, h5, h6 {
     font-size: theme.$font-size-18;
     font-weight: 600;
-    margin: 1.25em 0 .75em;
+    margin: 1.5em 0 .75em;
   }
 
   ul {
     list-style-type: disc;
     padding-left: 1.5rem;
+    margin: 1.25em 0 1.5em;
 
     > li > ul {
       list-style-type: circle;
+      margin: .5em 0 .75em;
 
       > li > ul {
         list-style-type: disc;
+        margin: .5em 0 .75em;
       }
+    }
+
+    li::marker {
+      font-size: theme.$font-size-20;
     }
   }
 
   ol {
     list-style-type: decimal;
     padding-left: 1.5rem;
+    margin: 1.25em 0 1.5em;
+
+    > li::marker {
+      font-size: theme.$font-size-16;
+    }
   }
 
-  li::marker {
-    font-size: theme.$font-size-20;
+  li {
+    margin-top: .5em;
+
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+
+  a {
+    color: theme.$color-primary;
+    font-weight: 500;
   }
 
   code {
@@ -88,7 +109,7 @@
     border-radius: .25em;
     font-style: italic;
     color: lighten(theme.$color-gray, 10%);
-    margin: .75em 0;
+    margin: 1.5em 0;
     padding: .75em;
   }
 }

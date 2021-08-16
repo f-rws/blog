@@ -3,6 +3,9 @@ title: "オブジェクトタイプのコピーについて"
 date: "2021-08-14"
 ---
 
+## はじめに
+オブジェクトのコピーについて学習したのでまとめました。間違っている箇所などありましたら、TwitterのDMなどでご指摘いただけると幸いです。
+
 ## シャローコピー
 シャローコピーとは１階層目の深さのコピーのことを言います。
 オブジェクトタイプをシャローコピーする場合、一般的な方法としてスプレッド構文があります。
@@ -120,7 +123,8 @@ console.log(copyData);  // {key1: "2021-08-12T09:20:59.194Z"}
 
 > `Date`のインスタンスは文字列を返す `toJSON()` を実装しています (`date.toISOString()` と同じです)。したがって、これらは文字列として扱われます。
 
-`toJSON()`を実行しているそうです。そこで、`toJSON()`について[Mozila](https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Global_Objects/Date)
+`toJSON()`を実行しているそうです。そこで、`toJSON()`について
+[Mozilla](https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Global_Objects/Date)
 にて調べてみますと、次のように実行しています。
 >`toISOString()` を使用して `Date` を表す文字列を返します
  
