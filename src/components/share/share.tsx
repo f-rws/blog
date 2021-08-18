@@ -16,7 +16,7 @@ export const Share: React.VFC<Props> = (props) => {
     <ul className={styles.wrapper}>
       <li>
         <a
-          href={`https:twitter.com/intent/tweet?text=${encodedTitle}%0a&url=${url}`}
+          href={`https://twitter.com/intent/tweet?text=${encodedTitle}%0a&url=${url}`}
           target={'_blank'}
           rel={'noreferrer nofollow'}
           className={styles.link}
