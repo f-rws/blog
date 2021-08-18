@@ -11,7 +11,7 @@ type Props = {
 };
 
 export const PostContent: React.VFC<Props> = ({ postData }) => {
-  const { title, date, content } = postData;
+  const { slug, title, date, content } = postData;
   const resultDate = format(new Date(date), 'yyyy.MM.dd');
   const components = { code: CodeBlock };
 
@@ -30,7 +30,7 @@ export const PostContent: React.VFC<Props> = ({ postData }) => {
       <ReactMarkdown components={components} remarkPlugins={[gfm]} className={styles.markdown}>
         {content}
       </ReactMarkdown>
-      <Share />
+      <Share slug={slug} title={title} />
     </article>
   );
 };
