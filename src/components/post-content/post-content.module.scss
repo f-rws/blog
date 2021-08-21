@@ -111,6 +111,10 @@
     color: lighten(theme.$color-gray, 10%);
     margin: 1.5em 0;
     padding: .75em;
+
+    & code {
+      background-color: lighten(theme.$color-lightblue, 8%);
+    }
   }
 }
 
