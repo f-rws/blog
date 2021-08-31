@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import styles from './header.module.scss';
 import Image from 'next/image';
-import Logo from '../../../public/neenote.svg';
+import Logo from '../../../public/images/neenote.svg';
 
 export const Header: React.VFC = () => {
   return (
