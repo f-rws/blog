@@ -18,8 +18,8 @@ export const PageSeo: React.VFC<PageSeoProps> = (props) => {
       <meta property="og:type" content={'article'} />
       <meta property="og:url" content={url} />
       <link rel="canonical" href={url} />
-      <link rel="shortcut icon" type="image/png" sizes="32x32" href="/public/favicon-32x32.png" />
-      <link rel="shortcut icon" type="image/png" sizes="16x16" href="/public/favicon-16x16.png" />
+      <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png" />
+      <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png" />
     </Head>
   );
 };
