@@ -10,7 +10,7 @@ export const Header: React.VFC = () => {
         <h1 className={styles.logo}>
           <Link href={'/'}>
             <a className={styles.link}>
-              <Image src={Logo} width={150} height={30} className={styles.logo} alt={'Neenote'} />
+              <Image src={Logo} width={150} height={30} className={styles.logo} alt={'neenote'} />
             </a>
           </Link>
         </h1>

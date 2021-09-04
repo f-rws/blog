@@ -15,7 +15,7 @@ export const Home = (props: HomeProps) => {
 
   return (
     <>
-      <PageSeo title={'blog'} description={'フルサワのブログです'} />
+      <PageSeo title={'neenote'} description={'フルサワのブログです'} />
       <Layout>
         {posts && (
           <ul className={styles.articles}>

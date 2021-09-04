@@ -14,7 +14,7 @@ const BlogPost: NextPage<Props> = ({ postData }) => {
 
   return (
     <>
-      <PageSeo title={title} description={'フルサワのブログです'} />
+      <PageSeo title={`${title} | neenote`} description={'フルサワのブログです'} />
       <Layout>
         <PostContent postData={postData} />
       </Layout>
