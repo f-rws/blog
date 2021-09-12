@@ -5,6 +5,7 @@ import { format } from 'date-fns';
 import { CodeBlock } from '../code-block/code-block';
 import gfm from 'remark-gfm';
 import { Share } from '../share/share';
+import { ImageElement } from '../image-element/image-element';
 
 type Props = {
   postData: PostData;
@@ -13,7 +14,11 @@ type Props = {
 export const PostContent: React.VFC<Props> = ({ postData }) => {
   const { slug, title, date, content } = postData;
   const resultDate = format(new Date(date), 'yyyy.MM.dd');
-  const components = { code: CodeBlock };
+
+  const components = {
+    code: CodeBlock,
+    img: ImageElement,
+  };
 
   return (
     <article className={styles.wrapper}>

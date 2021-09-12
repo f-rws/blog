@@ -6,6 +6,7 @@ date: "2021-09-10"
 ## はじめに
 `npm-check-updates` を使用してプロジェクトで管理しているライブラリをアップデートしたのでまとめたいと思います。間違っている箇所などありましたら、TwitterのDMなどでご指摘いただけると幸いです。
 
+![](../../../../public/images/blog/use-npm-check-updates-to-update-libraries/test-image.png)
 ### 環境
 - Node.js v14.17.1
 - npm v6.14.13
