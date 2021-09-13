@@ -116,6 +116,12 @@
       background-color: lighten(theme.$color-lightblue, 8%);
     }
   }
+
+  img {
+    width: 100%;
+    height: auto;
+    margin: 2em 0;
+  }
 }
 
 
