@@ -85,7 +85,7 @@
   }
 
   code {
-    font-size: theme.$font-size-16;
+    //font-size: theme.$font-size-16;
   }
 
   p code, li code {
@@ -94,14 +94,6 @@
     border-radius: .25em;
     padding: .15em .3em;
     margin: 0 .2em;
-  }
-
-  pre {
-    background-color: theme.$color-code-block-background;
-    border-radius: .25em;
-    margin: 1.5em 0;
-    padding: .75em;
-    overflow-x: auto;
   }
 
   blockquote {
